@@ -86,3 +86,34 @@ print( lista )
 # copiar elemento
 lista[ 1 ] = lista[ 2 ]
 print( lista )
+
+# funções utilitárias em listas numéricas
+números = []
+for num in range( 1, 11 ): 
+    números.append( num*2 )
+print( números )
+print( 'min=', min(números), 'max=', max(números), 'soma=',  sum(números) )
+
+# outra forma (+ compacta) de criar a lista anterior:
+números = [ num*2 for num in range( 1, 11 ) ]
+print( números )
+print( 'min=', min(números), 'max=', max(números), 'soma=',  sum(números) )
+
+# obter uma 'fatia' da lista
+fatia = números[ 2:6 ] # é criada uma outra lista
+print( fatia )
+print( números[ :3 ] )
+print( números[ 4: ] )
+print( números[ -3: ] ) # os três últimos
+
+for n in números[ :4 ] :  print( str(n) + " ", end=" " )
+print()
+
+# copiar
+lista_clone = números[ : ] # 2 listas
+print( lista_clone )
+
+# cuidado
+lista_clone = números # 1 lista com 2 referências
+lista_clone.clear()
+print( len( números ) )
