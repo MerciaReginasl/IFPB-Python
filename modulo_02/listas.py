@@ -109,13 +109,19 @@ print( números[ -3: ] ) # os três últimos
 for n in números[ :4 ] :  print( str(n) + " ", end=" " )
 print()
 
+# remover usando sintaxe fatia
+del fatia[2:4]
+# remover todos os elementos
+fatia.clear() #ou del fatia[:] #ou del fatia[0:len(fatia)]
+# del fatia # irá desalocar a lista da memória
+
 # copiar
 lista_clone = números[ : ] # 2 listas
 print( lista_clone )
 
 # cuidado
 lista_clone = números # 1 lista com 2 referências
-lista_clone.clear()
+lista_clone.clear() 
 print( len( números ) )
 
 # tuplas: listas imutáveis
