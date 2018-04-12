@@ -34,7 +34,7 @@ def rodape():
     print( '::: Python in Action :::' )
 
 rodape() # invocação (declaracao deve vir antes)
-print( rodape() ) # mas, não há retorno
+print( rodape() ) # mas, não há retorno---implicitamente, retorna None
 print( rodape ) # apenas endereço
 
 # com parâmetros
@@ -44,6 +44,7 @@ def rodape_autor_pag( titulo, autor, pag ):
 rodape_autor_pag( 'Python in Action', 'David Beazley', 42 ) # passagem de argumentos para parâmetros
 #rodape_autor_pag( 42, 'David Beazley', 'Python in Action' ) # ops!
 rodape_autor_pag( pag=42, autor='David Beazley', titulo='Python in Action' ) # a ordem nao importa, neste caso
+rodape_autor_pag( 'Python in Action', pag=42, autor='David Beazley' ) 
 
 # com valor default: devem aparecer nas últimas posições
 def rodape_autor_pag_def( titulo, autor, pag=1 ):
@@ -58,6 +59,15 @@ def formatar_endereco( rua, num, bairro, cep, complemento='' ):
 formatar_endereco( 'Damasco', 213, 'Sta Rosa', '58416-510' ) # complemento é opcional
 formatar_endereco( 'Damasco', 213, 'Sta Rosa', '58416-510', '(Prox. a Madeireira Alves)'  )  
 
+def mostrar_pag (pag=1):
+    print( 'pág:',  pag )
+
+mostrar_pag()
+
+pag = 42
+mostrar_pag(pag) # shadowing: var pag e param pag sao coisas diferentes
+                 # param oculta var pag mas só dentro da função
+
 # com retorno
 def somar( a, b ):
    resultado = a + b
@@ -66,6 +76,12 @@ def somar( a, b ):
 print( somar( 3, 5 ) )
 r = somar( 3, 5 )
 print( r )
+
+somar( 3, 5 ) # válido, mas soma será perdida
+
+def dividir( a, b ):
+    if b == 0: return # há apenas a saída sem retornar um valor
+    print( 'a/b=', a / b)
 
 # modificando listas em funcoes
 nums = [ i for i in range( 1, 11 ) ]
