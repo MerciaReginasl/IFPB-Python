@@ -106,6 +106,15 @@ copia = remover_pares( nums[:] ) # passe uma cópia, em vez da original
 print( 'copia-remover_pares=' , copia )
 print( 'original-remover_pares=' , nums )
 
+# com variável, náo será modificada
+v = 58
+def foo( v ):
+    print( 'v:', v )
+    v+=1 # só a var local é alterada
+    print( 'v+=1:', v )
+foo(v) # será passado o valor de v (e náo v em si)
+print( 'v:', v )
+
 # quantidade variada de argumentos
 def mostrar_preferencias( nome, *preferencias ):
     print( nome.title(), 'prefere: ' )
