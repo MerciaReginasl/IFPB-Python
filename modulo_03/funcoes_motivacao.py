@@ -79,9 +79,17 @@ print( r )
 
 somar( 3, 5 ) # válido, mas soma será perdida
 
+def dividir_none( a, b ):
+    return a / b if b != 0 else None
+
 def dividir( a, b ):
-    if b == 0: return # há apenas a saída sem retornar um valor
-    print( 'a/b=', a / b)
+    if b == 0 : return # None aqui é implícito
+    return a / b
+
+print( dividir( 4, 2 ) )
+print( dividir_none( 4, 2 ) )
+print( dividir( 4, 0 ) )
+print( dividir_none( 4, 0 ) )
 
 # modificando listas em funcoes
 nums = [ i for i in range( 1, 11 ) ]
