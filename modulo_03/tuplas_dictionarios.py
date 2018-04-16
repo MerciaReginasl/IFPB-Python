@@ -25,6 +25,10 @@ print( dic_produtos.keys() ) # retorna lista
 print( dic_produtos.values() ) # retorna lista
 print( dic_produtos.items() ) # retorna lista de tuplas/pares
 
+# modificar
+dic_produtos[ 300 ] = 'mouse'
+print( dic_produtos[300] ) # ou print( dic_produtos.get( 300 ) )
+
 # varrendo
 for k in sorted( dic_produtos.keys() ):
     print( dic_produtos.get( k ) )
