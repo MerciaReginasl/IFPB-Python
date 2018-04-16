@@ -123,7 +123,3 @@ print( lista_clone )
 lista_clone = números # 1 lista com 2 referências
 lista_clone.clear() 
 print( len( números ) )
-
-# tuplas: listas imutáveis
-tipos_conta = ( 'normal', 'poupança', 'universitário' )
-# tipos_conta[0] = 'pedro' # erro
