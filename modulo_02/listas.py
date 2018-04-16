@@ -51,8 +51,9 @@ print( 'removido=', elem )
 print( estados )
 
 # remover a (1a) ocorrência do elemento (não sei o índice)
-números = []
+números = []  # ou números = list()
 for i in range( 5, 21, 5 ): números.append( i ) # [5, 10, 15, 20]
+# ou números = list(range( 5, 21, 5 )) # [5, 10, 15, 20]
 números.remove( 10 ) # não retorna elemento como pop() 
 print( números )
 
