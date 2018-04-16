@@ -45,8 +45,8 @@ del dic_produtos[ 300 ] # del
 print( dic_produtos )
 
 # adicionar
-chaves = [ 600, 400, 500 ]
-valores = [ 'ana', 'pedro', 'caio' ]
+chaves = [ 600, 400, 500, 200 ]
+valores = [ 'ana', 'pedro', 'ana', 'caio' ]
 dic_clientes = {} # dic vazio
 
 for i, ch in enumerate( chaves ):
@@ -55,6 +55,10 @@ print( dic_clientes )
 
 dic_clientes[ 900 ] = 'maria'
 print( dic_clientes )
+
+# imprimir valores sem duplicatas
+for v in set( dic_clientes.values() ):
+    print( v )
 
 # 1 chave com "múltiplos" valores? Use valor como 1 tupla ou 1 lista
 dic_alunos = {}
