@@ -93,6 +93,16 @@ def imprimir_dicionario( dic ):
     if( dic ) : print( dic )
     else:
         print( 'Desculpe. Não há alunos ou notas a serem impressos.' )
+
+def imprimir_dicionario_manual( dic ):
+    if( dic ) :
+        for k in dic.keys():
+            print( 'aluno(key)=', k,  'notas(values)= [', end='' )
+            for i in range( len(dic[k]) ):
+                print( ' ' + str( dic[k][i] ), end='' )
+            print(' ]')
+    else:
+        print( 'Desculpe. Não há alunos ou notas a serem impressos.' )
     
 # algoritmo principal
 while True :
