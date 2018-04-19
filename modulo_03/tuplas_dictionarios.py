@@ -60,6 +60,26 @@ print( dic_clientes )
 for v in set( dic_clientes.values() ):
     print( v )
 
+# quantidade variada de argumentos com pares: nome->valor
+def cadastrar_usuario( nome, sobrenome, **dados ):
+    dic_usuarios = {}
+    dic_usuarios['nome'] = nome
+    dic_usuarios['sobrenome'] = sobrenome
+    for k, v in dados.items(): # **dados é um dicionário:par/valor
+        dic_usuarios[ k ] = v
+    return dic_usuarios
+
+usuario = cadastrar_usuario( 'ana', 'silva',
+                    rg=12345,
+                    cpf='333.333.333-33',
+                    endereco='R. Sol, 555, Centro',
+                    altura=1.72,
+                    peso=68,
+                    profissao='enfermeira',
+                    celular='839990-2222' )
+
+print( usuario )
+
 # 1 chave com "múltiplos" valores? Use valor como 1 tupla ou 1 lista
 dic_alunos = {}
 
