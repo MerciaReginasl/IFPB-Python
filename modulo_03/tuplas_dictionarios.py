@@ -61,15 +61,15 @@ for v in set( dic_clientes.values() ):
     print( v )
 
 # quantidade variada de argumentos com pares: nome->valor
-def cadastrar_usuario( nome, sobrenome, **dados ):
-    dic_usuarios = {}
-    dic_usuarios['nome'] = nome
-    dic_usuarios['sobrenome'] = sobrenome
+def montar_usuario( nome, sobrenome, **dados ):
+    dic_usuario = {}
+    dic_usuario['nome'] = nome
+    dic_usuario['sobrenome'] = sobrenome
     for k, v in dados.items(): # **dados é um dicionário:par/valor
-        dic_usuarios[ k ] = v
-    return dic_usuarios
+        dic_usuario[ k ] = v
+    return dic_usuario
 
-usuario = cadastrar_usuario( 'ana', 'silva',
+usuario = montar_usuario( 'ana', 'silva',
                     rg=12345,
                     cpf='333.333.333-33',
                     endereco='R. Sol, 555, Centro',
