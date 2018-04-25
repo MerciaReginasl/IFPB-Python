@@ -19,7 +19,7 @@ Desenvolvido por: [Python Institute](http://pythoninstitute.org/)
 
 ## Instalação
 
-Pode-se obter os códigos simplesmente fazendo o *download* do [repositório](https://github.com/cesarvasconcelos/ifpb-python.git) ou, alternativamente, usando o [Git](https://git-scm.com/) para clonar o repositório funcional e seu histórico de versões:
+Pode-se obter apenas [os códigos](https://github.com/cesarvasconcelos/ifpb-python/archive/master.zip) ou, alternativamente, utilizar o [Git](https://git-scm.com/) para clonar todo o repositório funcional e seu histórico de versões:
 
 ```
 $ git clone https://github.com/cesarvasconcelos/ifpb-python.git
