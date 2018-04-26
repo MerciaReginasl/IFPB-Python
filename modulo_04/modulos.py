@@ -34,9 +34,19 @@ print(dt.strftime("%b")) # %b/B - mês
 print(dt.strftime("%d")) # %d/D - dia/mês
 print(dt.strftime("%A, %d de %B de %Y"))
 
-# exemplo hora
+# exemplo data & hora
 print(dt.strftime("%c")) # data & hora c/ locale
 print(dt.strftime("%x")) # data c/ locale
 print(dt.strftime("%X")) # hora c/ locale
 print(dt.strftime("%I:%M:%S %P")) # 12H:M:S AM/PM
 print(dt.strftime("%H:%M")) #24H:M
+
+# alias: funções
+# from <nome_modulo> import <função_0> as <alias>
+from math import sqrt as raiz_quadrada
+print('raiz_quadrada(9)=', raiz_quadrada(9))
+
+# alias: módulos
+# import <nome_modulo> as <alias>
+import math as modulo_matematica
+print('2**5=', modulo_matematica.pow(2,5))
