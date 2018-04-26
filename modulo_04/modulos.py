@@ -50,3 +50,11 @@ print('raiz_quadrada(9)=', raiz_quadrada(9))
 # import <nome_modulo> as <alias>
 import math as modulo_matematica
 print('2**5=', modulo_matematica.pow(2,5))
+
+# from math import *
+# Python irá copiar todas as funções para seu programa.
+# melhor evitar esta notação: 
+#  - se houver math.funcao == minha.funcao,
+#    pode haver resultados inesperados
+# melhor importar algo específico 
+# ou importar o módulo e usar nome qualificado
