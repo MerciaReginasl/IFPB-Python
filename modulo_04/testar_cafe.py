@@ -1,15 +1,17 @@
 import cafe
 
-cafe.processar_cafe('pedro', 'creme', 'chocolate', 'canela', tam='l')
+# nome qualificado
+cafe.processar_cafe('pedro', 'creme', 'chocolate', 'canela', tam='m')
 cafe.processar_cafe('ana')
 
+# import específico da função 
 from cafe import processar_cafe
 processar_cafe('caio', 'creme') # sem qualificar
 
-# alias
+# import específico da função & alias
 from cafe import processar_cafe as pc
-pc('marcos', 'leite', 'chocolate', tam='M') # sem qualificar
+pc('marcos', 'leite', 'chocolate') # sem qualificar
 
-# alias: módulo
+# import de módulo & alias
 import cafe as c
-c.processar_cafe('marcos', 'leite', 'chocolate', tam='M')
+c.processar_cafe('marcos', 'leite', 'chocolate')
