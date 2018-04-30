@@ -27,10 +27,17 @@ print('3! (namespace código)', factorial(3)) # não há conflito com math
 
 # importar algo específico do módulo
 # from <nome_modulo> import <função_0, função_1, função_2>
-# desse jeito, não precisa usar o nome qualificado
+# desse jeito, os nomes são acessados sem qualificação
 from datetime import date
 hoje = date.today()
 print(hoje)
+
+# mas, cuidado: nessa forma de importar,
+# seu namespace pode sobrescrever o do módulo
+from cmath import e
+print('e=', e) # Euler num
+e = 999 # sobrescreve o ´e´ de cmath
+print('e=', e) # confusão
 
 # exemplo data
 import locale
