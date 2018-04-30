@@ -1,6 +1,6 @@
 # modularização:
 #  - divisão de algo (e.g., programa) grande em partes 
-#    menores e mais fáceis de gerenciar
+#    menores e mais fáceis de gerenciar e manter
 #  - a ideia é agrupar suas funções em um módulo separado e permitir
 #    que outros possam "importá-lo" permitindo o reuso
 #  - usuário não precisa conhecer dos detalhes de implementação do módulo,
@@ -8,11 +8,22 @@
 # 
 
 # importar tornando as entidades disponíveis
-# ao importar assim, use: nome_modulo.função()
+# ao importar assim, use: <nome_modulo>.<algo>
 import math 
 
-print('3!=', math.factorial(3))
+print('Pi', math.pi) # namespace de math
+print('3!', math.factorial(3)) # namespace de math
 # print(factorial(3)) # erro
+
+# o nome qualificado <nome_modulo>.<algo> indica o namespace
+# o import no formato acima evita conflito com o namespace do código
+# veja que meu namespace pode coexistir com o de math:
+pi = 3.14
+print('Pi (namespace código)', pi) # não há conflito com math
+def factorial(num):
+    if num == 0: return 1
+    return num * factorial(num - 1)
+print('3! (namespace código)', factorial(3)) # não há conflito com math
 
 # importar algo específico do módulo
 # from <nome_modulo> import <função_0, função_1, função_2>
